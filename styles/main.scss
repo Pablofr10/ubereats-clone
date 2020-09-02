@@ -1,8 +1,99 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
-    margin: 0;
-    font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: calc(100% - 120px);
+  margin: auto;
+}
+
+// variáveis
+$color-green: #06c167;
+$color-grey: rgb(238, 238, 238);
+
+header {
+  .logo {
+    h1 {
+      font-weight: 300;
+
+      span {
+        font-weight: 600;
+        color: $color-green;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .searchBar {
+    margin-left: auto;
+  }
+  .header-option {
+    padding-left: 5rem;
+    letter-spacing: 0.6px;
+  }
+  .currentDetails,
+  .searchBar {
+    display: flex;
+    padding-left: 1rem;
+  }
+}
+
+.options {
+  padding: 1rem 0;
+  .options-btn {
+    background: $color-grey;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: 0.6px;
+    &.selected {
+      background: black;
+      color: white;
+    }
+  }
+}
+
+.listings {
+  .header {
+    display: flex;
+    .header-viewOptions {
+      margin-left: auto;
+      display: flex;
+      .viewAll {
+        color: $color-green;
+        padding-left: 2rem;
+      }
+      .viewMore {
+        display: flex;
+        .arrow {
+          width: 40px;
+          height: 40px;
+          background: red;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: $color-grey;
+          opacity: 0.3;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+          &.darker,
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }

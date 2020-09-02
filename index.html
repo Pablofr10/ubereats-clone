@@ -9,16 +9,17 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Pablo <span>Eats</span></h1>
+                <h1>Pablo<span>Eats</span></h1>
             </div>
             <div class="currentDetails">
-                <div class="currentDetails-option">
+                <div class="header-option">
                     <span>London</span>
                 </div>
-                <div class="currentDetails-option">
+                <div class="header-option">
                     <span>Deliver now</span>
                 </div>
             </div>
@@ -26,10 +27,54 @@
                 <div class="header-option">
                     Search
                 </div>
+                <div class="header-option">
+                    Sign in
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- Options -->
+    <div class="options">
+        <div class="container">
+            <button class="options-btn selected">
+                Delivery
+            </button>
+            <button class="options-btn">
+                Pick-up
+            </button>
+        </div>
+    </div>
+
+    <!-- Listing -->
+    <div class="listings">
+        <div class="container">
+            <div class="header">
+                <div class="header-title">
+                    <h2>When you're hungry now</h2>
+                    <span>The fastest food to your door.</span>
+                </div>
+                <div class="header-viewOptions">
+                    <div class="viewAll">
+                        <span>View All</span>
+                    </div>
+                    <div class="viewMore">
+                        <span class="arrow left">
+                            <i data-feather="arrow-left"></i>
+                        </span>
+                        <div class="arrow right darker">
+                            <i data-feather="arrow-right"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>
