@@ -3,6 +3,11 @@
   font-size: 16px;
 }
 
+.smallText {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -16,13 +21,16 @@ body {
 // variáveis
 $color-green: #06c167;
 $color-grey: rgb(238, 238, 238);
+$color-greyDarker: rgb(84, 84, 84);
 
 header {
   .logo {
     h1 {
       font-weight: 300;
-
+      font-size: 2rem;
       span {
+        font-size: 2rem;
+
         font-weight: 600;
         color: $color-green;
       }
@@ -40,6 +48,12 @@ header {
   .header-option {
     padding-left: 5rem;
     letter-spacing: 0.6px;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 1rem;
+      display: inline-flex;
+    }
   }
   .currentDetails,
   .searchBar {
@@ -57,6 +71,12 @@ header {
     border: 0;
     font-size: 1rem;
     letter-spacing: 0.6px;
+    display: inline-flex;
+    align-items: center;
+    svg {
+      max-width: 20px;
+      margin-right: 0.4rem;
+    }
     &.selected {
       background: black;
       color: white;
@@ -65,25 +85,33 @@ header {
 }
 
 .listings {
+  padding: 2rem;
   .header {
     display: flex;
+    align-items: center;
+    .header-title {
+      h2 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+      }
+      span {
+        color: $color-greyDarker;
+      }
+    }
     .header-viewOptions {
       margin-left: auto;
       display: flex;
+      margin: auto 0 auto auto;
       .viewAll {
         color: $color-green;
-        padding-left: 2rem;
+        padding-right: 2rem;
       }
       .viewMore {
         display: flex;
         .arrow {
-          width: 40px;
-          height: 40px;
           background: red;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
           background: $color-grey;
           opacity: 0.3;
           transition: all 0.2s ease-in-out;
@@ -92,6 +120,68 @@ header {
           &:hover {
             opacity: 1;
           }
+        }
+      }
+    }
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    border-radius: 50%;
+  }
+
+  &-grid {
+    display: flex;
+    &-element {
+      width: 33%;
+      margin-top: 2rem;
+      &:not(:last-child) {
+        padding-right: 30px;
+      }
+      .image {
+        height: 240px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text-lower {
+        padding: 0.6rem 0;
+        span {
+          color: $color-greyDarker;
+        }
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 1rem 0;
+        h3 {
+          font-weight: 400;
+          margin-bottom: 0.3rem;
+          margin-top: 0;
+        }
+        span {
+          font-size: 0.8rem;
+          font-weight: 300;
+          color: $color-greyDarker;
+        }
+      }
+      .rating {
+        margin: auto 0 auto auto;
+        height: 100%;
+        span {
+          height: 40px;
+          width: 40px;
+          background: $color-grey;
+          font-size: 1rem;
+          color: black;
         }
       }
     }

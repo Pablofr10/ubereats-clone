@@ -3,6 +3,11 @@
   font-size: 16px;
 }
 
+.smallText {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -15,9 +20,11 @@ body {
 
 header .logo h1 {
   font-weight: 300;
+  font-size: 2rem;
 }
 
 header .logo h1 span {
+  font-size: 2rem;
   font-weight: 600;
   color: #06c167;
 }
@@ -34,6 +41,13 @@ header .searchBar {
 header .header-option {
   padding-left: 5rem;
   letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
+}
+
+header .header-option svg {
+  margin-right: 1rem;
+  display: inline-flex;
 }
 
 header .currentDetails,
@@ -53,6 +67,13 @@ header .searchBar {
   border: 0;
   font-size: 1rem;
   letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.options .options-btn svg {
+  max-width: 20px;
+  margin-right: 0.4rem;
 }
 
 .options .options-btn.selected {
@@ -60,18 +81,35 @@ header .searchBar {
   color: white;
 }
 
+.listings {
+  padding: 2rem;
+}
+
 .listings .header {
   display: flex;
+  align-items: center;
+}
+
+.listings .header .header-title h2 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.listings .header .header-title span {
+  color: #545454;
 }
 
 .listings .header .header-viewOptions {
   margin-left: auto;
   display: flex;
+  margin: auto 0 auto auto;
 }
 
 .listings .header .header-viewOptions .viewAll {
   color: #06c167;
-  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .listings .header .header-viewOptions .viewMore {
@@ -79,13 +117,7 @@ header .searchBar {
 }
 
 .listings .header .header-viewOptions .viewMore .arrow {
-  width: 40px;
-  height: 40px;
   background: red;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
   background: #eeeeee;
   opacity: 0.3;
   transition: all 0.2s ease-in-out;
@@ -94,4 +126,77 @@ header .searchBar {
 
 .listings .header .header-viewOptions .viewMore .arrow.darker, .listings .header .header-viewOptions .viewMore .arrow:hover {
   opacity: 1;
+}
+
+.listings .circle {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  border-radius: 50%;
+}
+
+.listings-grid {
+  display: flex;
+}
+
+.listings-grid-element {
+  width: 33%;
+  margin-top: 2rem;
+}
+
+.listings-grid-element:not(:last-child) {
+  padding-right: 30px;
+}
+
+.listings-grid-element .image {
+  height: 240px;
+  overflow: hidden;
+}
+
+.listings-grid-element .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.listings-grid-element .text-lower {
+  padding: 0.6rem 0;
+}
+
+.listings-grid-element .text-lower span {
+  color: #545454;
+}
+
+.listings-grid-element .text {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.listings-grid-element .text h3 {
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+  margin-top: 0;
+}
+
+.listings-grid-element .text span {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #545454;
+}
+
+.listings-grid-element .rating {
+  margin: auto 0 auto auto;
+  height: 100%;
+}
+
+.listings-grid-element .rating span {
+  height: 40px;
+  width: 40px;
+  background: #eeeeee;
+  font-size: 1rem;
+  color: black;
 }
